@@ -54,10 +54,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             "/resume/findByVacancyId/**", "/showResume/**"};
     private static final String[] ADMIN_COWNER_URLS = {"/companies/update/**"};
 //    private static final String[] USER_URLS = {"/users"};
-    private static final String[] COWNER_USER_URLS = {"/resume/**", "/companies/create", "/companies/approve", "/people", "/people/*", "people/**"};
-    private static final String[] ALL_USERS_URLS = {"/companies/byName/**", "/companies/byCompany/**", "/claims", "/photo/**", "/users/**", "/users/enabled/**",
-            "/", "/vacancies/**", "/login", "/login/**", "/password/**", "/healthCheck", "/pdf/**", "/updatePDF", "/createPdf/**",
-            "/sendResume/{vacancyId}", "/companies/byVacancyId/**", "/searchVacancy"};
+    private static final String[] COWNER_USER_URLS = {"/resume/**", "/companies/create", "/companies/approve", "/people", "/people/*", "people/**",
+                                                      "/companies/byName/**", "/companies/byCompany/**", "/claims", "/photo/**",
+                                                      "/pdf/**", "/updatePDF", "/createPdf/**", "/sendResume/{vacancyId}"};
+    private static final String[] ALL_USERS_URLS = {"/users/**", "/users/enabled/**", "/", "/vacancies/**", "/login", "/login/**", "/password/**", "/healthCheck", "/companies/byVacancyId/**", "/searchVacancy"};
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
